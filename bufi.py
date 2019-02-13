@@ -4,7 +4,6 @@ import hmac
 import hashlib
 import urllib.request
 import json
-import time
 import re
 
 from PyQt5.QtWidgets import QMessageBox
