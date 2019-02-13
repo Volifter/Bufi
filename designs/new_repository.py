@@ -1,0 +1,93 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'new_repository_dialog.ui'
+#
+# Created by: PyQt5 UI code generator 5.10.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_Dialog(object):
+    def setupUi(self, Dialog):
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(330, 324)
+        self.verticalLayoutWidget = QtWidgets.QWidget(Dialog)
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(10, 10, 310, 304))
+        self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.label = QtWidgets.QLabel(self.verticalLayoutWidget)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.verticalLayout.addWidget(self.label)
+        self.formLayout = QtWidgets.QFormLayout()
+        self.formLayout.setFieldGrowthPolicy(QtWidgets.QFormLayout.AllNonFixedFieldsGrow)
+        self.formLayout.setObjectName("formLayout")
+        self.label_2 = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label_2.setObjectName("label_2")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.label_2)
+        self.name_input = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.name_input.setObjectName("name_input")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.name_input)
+        self.label_3 = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label_3.setText("")
+        self.label_3.setObjectName("label_3")
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.label_3)
+        self.ramassage_acl_check = QtWidgets.QCheckBox(self.verticalLayoutWidget)
+        self.ramassage_acl_check.setChecked(True)
+        self.ramassage_acl_check.setObjectName("ramassage_acl_check")
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.ramassage_acl_check)
+        self.label_4 = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label_4.setText("")
+        self.label_4.setObjectName("label_4")
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.LabelRole, self.label_4)
+        self.label_5 = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label_5.setText("")
+        self.label_5.setObjectName("label_5")
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.LabelRole, self.label_5)
+        self.select_clone_dir_button = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        self.select_clone_dir_button.setEnabled(False)
+        self.select_clone_dir_button.setObjectName("select_clone_dir_button")
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.select_clone_dir_button)
+        self.clone_check = QtWidgets.QCheckBox(self.verticalLayoutWidget)
+        self.clone_check.setObjectName("clone_check")
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.clone_check)
+        self.label_6 = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label_6.setObjectName("label_6")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.label_6)
+        self.description_input = QtWidgets.QPlainTextEdit(self.verticalLayoutWidget)
+        self.description_input.setTabChangesFocus(True)
+        self.description_input.setObjectName("description_input")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.description_input)
+        self.verticalLayout.addLayout(self.formLayout)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.create_button = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        self.create_button.setObjectName("create_button")
+        self.horizontalLayout.addWidget(self.create_button)
+        self.cancel_button = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        self.cancel_button.setObjectName("cancel_button")
+        self.horizontalLayout.addWidget(self.cancel_button)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+
+        self.retranslateUi(Dialog)
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
+
+    def retranslateUi(self, Dialog):
+        _translate = QtCore.QCoreApplication.translate
+        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        self.label.setText(_translate("Dialog", "New repository"))
+        self.label_2.setText(_translate("Dialog", "Repository name"))
+        self.ramassage_acl_check.setText(_translate("Dialog", "Set ACL \"r\" for ramassage-tek"))
+        self.select_clone_dir_button.setText(_translate("Dialog", "Select directory..."))
+        self.clone_check.setText(_translate("Dialog", "Clone right away into..."))
+        self.label_6.setText(_translate("Dialog", "Description"))
+        self.create_button.setText(_translate("Dialog", "Create"))
+        self.cancel_button.setText(_translate("Dialog", "Cancel"))
+
