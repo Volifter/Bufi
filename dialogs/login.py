@@ -5,7 +5,7 @@ import designs.login
 class LoginDialog:
     def __init__(self, parent):
         self.submitted = False
-        self.window = login_dialog.Ui_Dialog()
+        self.window = designs.login.Ui_Dialog()
         self.form = QtWidgets.QDialog(parent)
         self.window.setupUi(self.form)
 
