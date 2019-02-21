@@ -296,15 +296,15 @@ class App:
         return not name.find(module) and name.upper().find(filter.upper()) != -1
 
     def update_repositories(self, update_request = True):
-        self.reset_repository_info()
-        self.toggle_repositories_list_lock(False)
-        self.window.repositories_list.clear()
-
         if (update_request):
             self.repositories = self.bufi.list_repositories()
             self.window.modules_dropdown.clear()
             self.window.modules_dropdown.addItem("All modules")
             self.modules = []
+
+        self.reset_repository_info()
+        self.toggle_repositories_list_lock(False)
+        self.window.repositories_list.clear()
         for repository in self.repositories:
             if (self.check_repository_filter(repository)):
                 self.window.repositories_list.addItem(repository)
