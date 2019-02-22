@@ -68,6 +68,9 @@ class Bufi:
         try:
             response = urllib.request.urlopen(request)
         except urllib.error.HTTPError as error:
+            if (error.code == 401):
+                self.show_error_dialog("Bad token!")
+                return {"error": "Bad token!"}
             try:
                 err = json.loads(error.read().decode('utf8'))["error"]
                 if (err != "No ACLs"):

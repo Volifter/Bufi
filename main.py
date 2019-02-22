@@ -239,7 +239,7 @@ class App:
         self.window.edit_acl_button.setEnabled(True)
 
     def on_logout_click(self):
-        session_file = open(".session", "w")
+        session_file = open(os.path.expanduser("~/.bufi_session"), "w+")
         session_file.write("")
         session_file.close()
         exit(0)
@@ -250,15 +250,16 @@ class App:
         login       = self.bufi.get_username()
         token_hash  = self.bufi.get_token_hash()
 
-        print("Saving session")
-        session_file = open(".session", "w")
+        session_file = open(os.path.expanduser("~/.bufi_session"), "w+")
         session_file.write(login + "\n" + token_hash)
         session_file.close()
 
     def get_saved_session(self):
         try:
-            session_file = open(".session", "r")
+            session_file = open(os.path.expanduser("~/.bufi_session"), "r")
         except IOError:
+            file = open(os.path.expanduser("~/.bufi_session"), "w+")
+            os.chmod(os.path.expanduser("~/.bufi_session"), 0o600)
             return None
         credentials = session_file.read().split("\n")
         session_file.close()
@@ -267,7 +268,7 @@ class App:
         return (credentials[0], credentials[1])
 
     def clear_session(self):
-        session_file = open(".session", "w")
+        session_file = open(os.path.expanduser("~/.bufi_session"), "w+")
         session_file.write("")
         session_file.close()
 
