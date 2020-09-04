@@ -1,6 +1,9 @@
 # Bufi
 Bocal User-Friendly Interface
 
+# DISCLAIMER
+This is an outdated project I finished a very long time ago. For an up-to-date, better looking version full of more useful features, please visit https://gitlab.com/volifter/epigit
+
 # Description
 Bufi makes managing your Epitech repositories easier.
 It includes the functionality of the `blih` command-line tool, adding a nice graphical interface and some time saving features.
